@@ -1,0 +1,34 @@
+--- Normal - FAQ match ---
+Query: Do you offer SEO services?
+Status: 200
+Reply: Yes, we do offer SEO services. We help improve your website ranking through keyword optimization, technical SEO, and content strategy. If you're looking to boost your online visibility, I'd be happy to guide you through our SEO process and see how we can help.
+
+--- Normal - FAQ match ---
+Query: What services do you offer?
+Status: 200
+Reply: We offer a full range of digital marketing services including SEO, social media marketing, PPC advertising, content creation, and branding support. These services are designed to help improve your online presence and grow your business. If you'd like to learn more about a specific service, feel free to ask and I'll be happy to help!
+
+--- Partial match ---
+Query: SEO?
+Status: 200
+Reply: We do offer SEO services to help improve your website ranking through keyword optimization, technical SEO, and content strategy. This can increase your online visibility and drive more traffic to your site. Would you like to know more about how our SEO services can help your business?
+
+--- Out of scope ---
+Query: What is the weather in Mumbai?
+Status: 200
+Reply: I'm not confident about this. Would you like to connect with human support?
+
+--- Unknown service ---
+Query: Do you provide legal consulting?
+Status: 200
+Reply: We don't provide legal consulting services. Our focus is on digital marketing services such as SEO, social media marketing, and content creation. If you're looking for legal consulting, I'd be happy to help you find resources that can assist you with that. Would you like to know more about our digital marketing services instead?
+
+--- Ambiguous ---
+Query: How much does it cost?
+Status: 200
+Reply: Our pricing depends on the services you choose and the scope of your project. We create customized plans based on your business goals and requirements, so the cost can vary. If you'd like to get a better idea of the costs involved, I'd be happy to guide you through the process and provide more information on our pricing model.
+
+--- Frustrated user ---
+Query: My ads are not working at all
+Status: 200
+Reply: I'm so sorry to hear that your ads aren't converting - it can be really frustrating. We can definitely help you optimize your ad campaigns to improve performance and conversions. We can analyze your current ads and suggest changes to target your audience more effectively and drive better results. Would you like to discuss your ad campaigns with us and see how we can help?

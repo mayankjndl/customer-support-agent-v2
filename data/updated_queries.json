@@ -1,0 +1,44 @@
+[
+  {
+    "timestamp": "2026-03-24 22:00:00",
+    "query": "do you offer seo services?",
+    "retrieved_docs": [
+      "We help businesses improve online visibility through SEO optimization."
+    ],
+    "response": "Yes, we do offer SEO services. We help improve your website ranking through keyword optimization and content strategy. If you'd like, I can share more details."
+  },
+  {
+    "timestamp": "2026-03-24 22:01:00",
+    "query": "what is the weather in mumbai?",
+    "retrieved_docs": [],
+    "response": "The current temperature in Mumbai is 31\u00b0C with scattered clouds."
+  },
+  {
+    "timestamp": "2026-03-24 22:02:00",
+    "query": "do you provide legal consulting?",
+    "retrieved_docs": [],
+    "response": "I'm not confident about this. Would you like to connect with human support?"
+  },
+  {
+    "timestamp": "2026-03-24 22:03:00",
+    "query": "how much does it cost?",
+    "retrieved_docs": [],
+    "response": "Could you please specify which service you're asking about? Our pricing depends on the type of service."
+  },
+  {
+    "timestamp": "2026-03-24 22:04:00",
+    "query": "seo?",
+    "retrieved_docs": [
+      "We help businesses improve online visibility through SEO optimization."
+    ],
+    "response": "Yes, we offer SEO services. We help improve your website ranking and visibility. Would you like to know how it works?"
+  },
+  {
+    "timestamp": "2026-03-24 22:05:00",
+    "query": "my ads are not working at all",
+    "retrieved_docs": [
+      "We provide paid advertising strategy and management."
+    ],
+    "response": "I understand how frustrating that can be. Yes, we can help optimize your ad campaigns to improve performance. We can review your setup and suggest improvements."
+  }
+]
