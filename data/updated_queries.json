@@ -1,44 +1,122 @@
 [
   {
-    "timestamp": "2026-03-24 22:00:00",
-    "query": "do you offer seo services?",
-    "retrieved_docs": [
-      "We help businesses improve online visibility through SEO optimization."
-    ],
-    "response": "Yes, we do offer SEO services. We help improve your website ranking through keyword optimization and content strategy. If you'd like, I can share more details."
+    "query": "bro my site not ranking why??",
+    "response": "There could be a few reasons like weak SEO, poor keywords, or technical issues on your website. If you want, I can take a quick look and suggest what might be going wrong."
   },
   {
-    "timestamp": "2026-03-24 22:01:00",
-    "query": "what is the weather in mumbai?",
-    "retrieved_docs": [],
-    "response": "The current temperature in Mumbai is 31\u00b0C with scattered clouds."
+    "query": "cheap plan hai kya",
+    "response": "Yes, we do offer flexible plans based on your needs and budget. If you tell me what you're looking for, I can suggest the best option for you."
   },
   {
-    "timestamp": "2026-03-24 22:02:00",
-    "query": "do you provide legal consulting?",
-    "retrieved_docs": [],
-    "response": "I'm not confident about this. Would you like to connect with human support?"
+    "query": "do u guys do seo or what",
+    "response": "Yes, we do provide SEO services. We help improve your website ranking and visibility using proven strategies. Let me know if you'd like more details."
   },
   {
-    "timestamp": "2026-03-24 22:03:00",
-    "query": "how much does it cost?",
-    "retrieved_docs": [],
-    "response": "Could you please specify which service you're asking about? Our pricing depends on the type of service."
+    "query": "insta ads chala sakte ho kya",
+    "response": "Yes, we can run Instagram ads for you. We help with targeting, creatives, and optimization to get better results. Let me know your goal and I can guide you further."
   },
   {
-    "timestamp": "2026-03-24 22:04:00",
-    "query": "seo?",
-    "retrieved_docs": [
-      "We help businesses improve online visibility through SEO optimization."
-    ],
-    "response": "Yes, we offer SEO services. We help improve your website ranking and visibility. Would you like to know how it works?"
+    "query": "how much u charge bro",
+    "response": "Our pricing depends on the services you need and your goals. If you share a bit more about your requirements, I can give you a better estimate."
   },
   {
-    "timestamp": "2026-03-24 22:05:00",
-    "query": "my ads are not working at all",
-    "retrieved_docs": [
-      "We provide paid advertising strategy and management."
-    ],
-    "response": "I understand how frustrating that can be. Yes, we can help optimize your ad campaigns to improve performance. We can review your setup and suggest improvements."
+    "query": "site pe traffic hi nahi aa raha",
+    "response": "There could be multiple reasons like weak SEO, poor content, or low visibility. We can analyze your website and suggest improvements to increase traffic."
+  },
+  {
+    "query": "ads chalaye but kuch result nahi mila",
+    "response": "I understand how frustrating that can be. Sometimes ads need proper targeting and optimization to perform well. We can review your current campaigns and help improve the results."
+  },
+  {
+    "query": "kya guarantee dete ho result ki",
+    "response": "We don’t guarantee specific results, but we use proven strategies to improve performance. I can explain what approach would work best for your business."
+  },
+  {
+    "query": "seo karne me kitna time lagega",
+    "response": "SEO usually takes around 3 to 6 months to show noticeable results. It depends on your competition and current website condition."
+  },
+  {
+    "query": "can u fix my website ranking fast",
+    "response": "Improving rankings takes time, but we can definitely speed up the process with the right strategy. Let me know your current situation and I can guide you."
+  },
+  {
+    "query": "i need more leads urgently",
+    "response": "We can help you generate more leads using a mix of ads and optimization strategies. If you share your business details, I can suggest the best approach."
+  },
+  {
+    "query": "do u handle small business also",
+    "response": "Yes, we work with small businesses as well. We tailor our strategies based on your size and goals."
+  },
+  {
+    "query": "mujhe bas instagram growth chahiye",
+    "response": "Sure, we can help you grow your Instagram through content strategy, engagement, and ads. Let me know your current page details."
+  },
+  {
+    "query": "why my google ads not working",
+    "response": "This could be due to poor targeting, ad creatives, or landing page issues. We can review your campaigns and identify what’s going wrong."
+  },
+  {
+    "query": "content bhi provide karte ho kya",
+    "response": "Yes, we do provide content services including blogs and website content. Let me know what type of content you need."
+  },
+  {
+    "query": "do u guys manage everything or i have to do something",
+    "response": "We can handle most of the work for you, but we may need some inputs from your side for better results. Don’t worry, we’ll guide you through everything."
+  },
+  {
+    "query": "kitna budget lagega minimum",
+    "response": "The minimum budget depends on the service you choose. If you tell me your goal, I can suggest a suitable budget range."
+  },
+  {
+    "query": "can i track what u guys are doing",
+    "response": "Yes, we provide reports and dashboards so you can track progress and performance anytime."
+  },
+  {
+    "query": "mujhe results nahi mil rahe abhi tak",
+    "response": "I understand your concern. Sometimes results take time depending on the strategy used. We can review your current setup and see what improvements can be made."
+  },
+  {
+    "query": "do u provide reports or not",
+    "response": "Yes, we provide regular reports so you can stay updated on performance and results."
+  },
+  {
+    "query": "my competitor ranking above me why",
+    "response": "Your competitor might have better SEO, content, or backlinks. We can analyze both and help you improve your ranking."
+  },
+  {
+    "query": "kya monthly plan hai",
+    "response": "Yes, we offer monthly plans based on your requirements. Let me know what service you're interested in."
+  },
+  {
+    "query": "do u work with new startups",
+    "response": "Yes, we work with startups and help them grow their online presence from the beginning."
+  },
+  {
+    "query": "mujhe website improve karni hai",
+    "response": "Sure, we can help improve your website in terms of SEO, content, and performance. Let me know what issues you're facing."
+  },
+  {
+    "query": "ads me paisa ja raha hai but no conversion",
+    "response": "That can happen if targeting or landing pages are not optimized. We can review your campaigns and help improve conversions."
+  },
+  {
+    "query": "can u guarantee sales",
+    "response": "We don’t guarantee sales, but we focus on improving your chances through proven strategies. I can explain what would work best for you."
+  },
+  {
+    "query": "how do i start with u guys",
+    "response": "You can get started by sharing your requirements with us. We’ll guide you through the onboarding process step by step."
+  },
+  {
+    "query": "support kaise milega",
+    "response": "You can reach our support through email or our contact form. We’re here to help whenever you need."
+  },
+  {
+    "query": "response late kyu aata hai",
+    "response": "We try to respond as quickly as possible, usually within 24 hours. If there's a delay, we appreciate your patience."
+  },
+  {
+    "query": "kya aap log branding bhi karte ho",
+    "response": "Yes, we do help with branding including strategy and positioning. Let me know what you're looking for."
   }
 ]

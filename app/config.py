@@ -26,6 +26,7 @@ MAX_MESSAGE_LENGTH = 500
 
 # --- FAQ Data Path ---
 FAQ_FILE_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "final_faq.txt")
+LOG_FILE_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "logs.jsonl")
 
 # --- Response Sanity Check ---
 MIN_RESPONSE_LENGTH = 10
@@ -40,5 +41,5 @@ BLOCKED_PHRASES = [
 ]
 
 FALLBACK_RESPONSE = (
-    "I'm not confident about this. Would you like to connect with human support?"
+    "I'm not sure, would you like human support?"
 )

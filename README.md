@@ -13,6 +13,8 @@ A production-ready, AI-powered customer support backend built for a digital mark
 - **Zero-Hallucination Guardrails:** Implements a 4-level defense system (Input limits, System Prompting, Hyperparameter tuning, and Post-LLM Sanity Checks) to ensure the AI never invents services or breaks character.
 - **Resilient Network Handling:** Built-in exponential backoff retries and strict timeouts to gracefully handle transient API provider drops.
 - **Full Context Injection:** Bypasses basic RAG implementations in favor of caching and injecting the full localized knowledge base, ensuring zero "retrieval misses."
+- **Interaction Tracking:** Structured JSONL logging of all queries, responses, and API latencies natively integrated via `logger_service`.
+- **Smart Parsing:** Natively handles empty inputs, missing values, and messy/informal datasets without breaking conversational continuity.
 
 ## 🛠 Tech Stack
 - **Framework:** FastAPI (Python)
@@ -53,3 +55,9 @@ A production-ready, AI-powered customer support backend built for a digital mark
    -H "Content-Type: application/json" \
    -d "{\"message\": \"Do you offer SEO services?\"}"
    ```
+<<<<<<< HEAD
+=======
+
+## 📄 Engineering Documentation
+For a deep dive into the system design, error-handling methodology, and architectural decisions, please refer to the officially submitted Overview Document.
+>>>>>>> 392d18f (feat: Integrate Task 2 updates (tracking, dataset alignment, resilient parsing))

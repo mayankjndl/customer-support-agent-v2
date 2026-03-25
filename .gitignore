@@ -12,6 +12,11 @@ build/
 # Virtual environment
 venv/
 .venv/
+venv2/
+
+# Telemetry & Test Logs
+*test*.txt
+data/logs.jsonl
 
 # IDE
 .vscode/
