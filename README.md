@@ -55,9 +55,3 @@ A production-ready, AI-powered customer support backend built for a digital mark
    -H "Content-Type: application/json" \
    -d "{\"message\": \"Do you offer SEO services?\"}"
    ```
-<<<<<<< HEAD
-=======
-
-## 📄 Engineering Documentation
-For a deep dive into the system design, error-handling methodology, and architectural decisions, please refer to the officially submitted Overview Document.
->>>>>>> 392d18f (feat: Integrate Task 2 updates (tracking, dataset alignment, resilient parsing))
