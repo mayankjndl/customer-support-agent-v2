@@ -1,5 +1,6 @@
 import json
-import httpx
+import urllib.request
+import urllib.error
 import time
 import os
 
@@ -22,18 +23,32 @@ def run_tests():
         
         try:
             start_time = time.time()
-            r = httpx.post(API_URL, json={"message": query}, timeout=30.0)
+            data_bytes = json.dumps({"message": query}).encode('utf-8')
+            req = urllib.request.Request(API_URL, data=data_bytes, headers={'Content-Type': 'application/json'})
+            
+            with urllib.request.urlopen(req, timeout=30.0) as response:
+                status_code = response.getcode()
+                response_body = response.read().decode('utf-8')
+                reply_data = json.loads(response_body)
+                actual = reply_data.get("reply", "No reply found")
+                
             latency = round((time.time() - start_time) * 1000)
             
-            if r.status_code == 200:
-                actual = r.json().get("reply", "No reply found")
-            else:
-                actual = f"HTTP Error {r.status_code}: {r.text}"
-                
             print(f"Actual:    {actual}")
             print(f"Latency:   {latency}ms\n")
             
-        except httpx.RequestError as e:
+        except urllib.error.HTTPError as e:
+            try:
+                error_body = e.read().decode('utf-8')
+                actual = f"HTTP Error {e.code}: {error_body}"
+            except:
+                actual = f"HTTP Error {e.code}"
+            print(f"Actual:    {actual}")
+            print(f"Latency:   N/A\n")
+        except urllib.error.URLError as e:
+            print(f"Actual:    Request failed: {e.reason}")
+            print(f"Latency:   N/A\n")
+        except Exception as e:
             print(f"Actual:    Request failed: {e}")
             print(f"Latency:   N/A\n")
 

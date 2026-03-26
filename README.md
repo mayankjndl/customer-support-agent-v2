@@ -4,17 +4,18 @@ A production-ready, AI-powered customer support backend built for a digital mark
 
 **Designed by:**
 - **Mayank Jindal**: Backend & LLM Integration layer
-- **Anohita**: Intelligence & Dataset layer
+- **Anohita Sen**: Intelligence & Dataset layer
 
 ## 🚀 Features
 
 - **Blazing Fast Inference:** Powered by Groq and the `llama-3.3-70b-versatile` model for near-instant latency.
-- **Microservice Architecture:** Clean separation of concerns (`config`, `loader`, `prompt builder`, `llm_service`, `api`).
+- **Intelligent Lead Capture:** Native LLM Tool Calling autonomously intercepts provided contact details (name, phone, query) and stores them cleanly using internal backend triggers.
+- **RESTful Endpoints:** `GET /leads` and `GET /analytics` endpoints mathematically aggregate runtime API logs off the disk to provide live dashboards.
+- **Microservice Architecture:** Clean separation of concerns (`config`, `loader`, `prompt builder`, `llm_service`, `db`, `logger`, `api`).
 - **Zero-Hallucination Guardrails:** Implements a 4-level defense system (Input limits, System Prompting, Hyperparameter tuning, and Post-LLM Sanity Checks) to ensure the AI never invents services or breaks character.
-- **Resilient Network Handling:** Built-in exponential backoff retries and strict timeouts to gracefully handle transient API provider drops.
-- **Full Context Injection:** Bypasses basic RAG implementations in favor of caching and injecting the full localized knowledge base, ensuring zero "retrieval misses."
+- **Resilient Network Handling:** Built-in exponential backoff retries and strict timeouts to gracefully handle transient API provider drops without throwing 500 errors.
+- **Full Context Injection:** Bypasses basic RAG implementations in favor of caching and injecting the full localized JSON knowledge base, ensuring zero "retrieval misses."
 - **Interaction Tracking:** Structured JSONL logging of all queries, responses, and API latencies natively integrated via `logger_service`.
-- **Smart Parsing:** Natively handles empty inputs, missing values, and messy/informal datasets without breaking conversational continuity.
 
 ## 🛠 Tech Stack
 - **Framework:** FastAPI (Python)

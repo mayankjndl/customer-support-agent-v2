@@ -25,8 +25,9 @@ RETRY_DELAYS = [1, 2]  # seconds between retries (exponential backoff)
 MAX_MESSAGE_LENGTH = 500
 
 # --- FAQ Data Path ---
-FAQ_FILE_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "final_faq.txt")
+FAQ_FILE_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "updated_queries.json")
 LOG_FILE_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "logs.jsonl")
+LEADS_FILE_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "leads.jsonl")
 
 # --- Response Sanity Check ---
 MIN_RESPONSE_LENGTH = 10
@@ -41,5 +42,11 @@ BLOCKED_PHRASES = [
 ]
 
 FALLBACK_RESPONSE = (
-    "I'm not sure, would you like human support?"
+    "I want to give you the right information. Let me connect you with our team. Can I take your contact details?"
 )
+
+API_ERROR_FALLBACK = (
+    "I'm not fully confident. Would you like me to connect you with human support?"
+)
+
+EMPTY_INPUT_MSG = "Please enter your query so I can help you."

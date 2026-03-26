@@ -64,16 +64,16 @@ def validate_response(response_text: str) -> str:
     return response_text
 
 
-def get_llm_response(messages: list[dict]) -> str:
+def get_llm_response(messages: list[dict]) -> tuple[str, str]:
     """
-    Sends the constructed messages to Groq and returns the LLM response.
-    Includes retry logic for transient errors.
+    Sends the constructed messages to Groq and returns the LLM response along with a status string.
+    Includes lightweight intent detection for lead capturing via tool calling.
 
     Args:
         messages: The messages array from prompt_builder.
 
     Returns:
-        The validated response string from the LLM.
+        Tuple of (Validated Response String, Status Enum String).
 
     Raises:
         Exception: If all retries are exhausted or a permanent error occurs.
@@ -94,12 +94,42 @@ def get_llm_response(messages: list[dict]) -> str:
                 messages=messages,
                 temperature=GROQ_TEMPERATURE,
                 max_tokens=GROQ_MAX_TOKENS,
+                tools=[{
+                    "type": "function",
+                    "function": {
+                        "name": "capture_lead",
+                        "description": "ONLY call this tool if the user explicitly provides their phone number, email, or name to be contacted. Do NOT call this for general inquiries.",
+                        "parameters": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string", "description": "User's name, or 'Unknown'"},
+                                "phone": {"type": "string", "description": "User's phone number or email"},
+                                "requirement": {"type": "string", "description": "Brief summary of their need"}
+                            },
+                            "required": ["name", "phone", "requirement"]
+                        }
+                    }
+                }],
+                tool_choice="auto"
             )
 
             latency_ms = round((time.time() - start_time) * 1000)
+            message = completion.choices[0].message
+            
+            # Lightweight Tool Processing (Lead Capture)
+            if message.tool_calls:
+                for tool_call in message.tool_calls:
+                    if tool_call.function.name == "capture_lead":
+                        import json
+                        from app.db.database import save_lead
+                        args = json.loads(tool_call.function.arguments)
+                        save_lead(args.get("name", "Unknown"), args.get("phone", "Unknown"), args.get("requirement", "Unknown"))
+                        logger.info(f"Lead captured via tool logic | {latency_ms}ms")
+                        return ("Thank you! I've saved your details. Our team will contact you shortly.", "lead_captured")
 
-            # Extract the response text
-            response_text = completion.choices[0].message.content.strip()
+            # Extract the normal response text
+            response_text = message.content or ""
+            response_text = response_text.strip()
 
             logger.info(
                 f"LLM response received | {len(response_text)} chars | {latency_ms}ms"
@@ -107,7 +137,8 @@ def get_llm_response(messages: list[dict]) -> str:
 
             # Run sanity check before returning
             validated_response = validate_response(response_text)
-            return validated_response
+            status = "fallback_triggered" if validated_response == FALLBACK_RESPONSE else "success"
+            return (validated_response, status)
 
         except (APITimeoutError, APIConnectionError) as e:
             last_error = e
