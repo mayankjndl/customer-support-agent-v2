@@ -3,8 +3,7 @@
 A production-ready, AI-powered customer support backend built for a digital marketing agency. This project ingests a localized FAQ dataset and uses a strict prompt architecture to provide fast, reliable, and hallucination-free support via the Groq LPU inference engine.
 
 **Designed by:**
-- **Mayank Jindal**: Backend & LLM Integration layer
-- **Anohita Sen**: Intelligence & Dataset layer
+- **Mayank Jindal**
 
 ## 🚀 Features
 
